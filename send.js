@@ -1,3 +1,7 @@
+/**
+ * Sends a message to a RabbitMQ queue.
+ * @param {string} msg - The message to be sent.
+ */
 const amqp = require('amqplib/callback_api');
 
 amqp.connect('amqp://localhost', (err, connection) => {

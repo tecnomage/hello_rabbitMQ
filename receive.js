@@ -1,3 +1,8 @@
+/**
+ * Connects to RabbitMQ server and waits for messages in the 'hello' queue.
+ * @param {Error} err - The error object, if any.
+ * @param {Object} connection - The RabbitMQ connection object.
+ */
 const amqp = require('amqplib/callback_api');
 
 amqp.connect('amqp://localhost', (err, connection) => {
