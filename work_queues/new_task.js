@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 /**
  * This script connects to RabbitMQ server and sends a message to a task queue.
  * The message can be provided as command line arguments or defaults to "Hello World!".
@@ -25,4 +24,8 @@ amqp.connect("amqp://localhost", (err, connection) => {
     });
     console.log(" [x] Sent '%s'", msg);
   });
+  setTimeout(function () {
+    connection.close();
+    process.exit(0);
+  }, 500);
 });
