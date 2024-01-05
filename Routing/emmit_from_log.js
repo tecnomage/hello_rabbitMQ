@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/**
+ * This script connects to RabbitMQ and publishes a message to a direct exchange.
+ * The severity level and message content can be provided as command line arguments.
+ * If no arguments are provided, it publishes a default message with severity 'info'.
+ */
 
 var amqp = require('amqplib/callback_api');
 
